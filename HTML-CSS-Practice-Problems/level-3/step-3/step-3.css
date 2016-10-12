@@ -112,23 +112,22 @@
 
 /* Set a min-width of 900px inside this media query */
 
-@media(/* ADD SOME CODE HERE*/) {
+@media(min-width: 900px) {
 
     /* add a different width to these classes to make them look better on larger screens */
 
     .item {
-       /*Add width*/
+       width: 40vw;
     }
 
     .full-width-item {
         /*Add width*/
-
+        width: 80vw;
     }
 
 
     .large-item {
         /*Add width*/
-
+        width: 80vw
     }
 }
-

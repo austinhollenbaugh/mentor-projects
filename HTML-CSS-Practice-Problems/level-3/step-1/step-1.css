@@ -4,6 +4,15 @@
     width: 100%;
     height: 530px;
     position: relative;
+    background: url("../img/Background.png") no-repeat;
+    background-size: cover;
+
+}
+
+.main-top-section {
+    width: 100%;
+    height: 530px;
+    position: relative;
 
 
 }
@@ -73,4 +82,3 @@
 .shop-icon {
     width: 350px;
 }
-
