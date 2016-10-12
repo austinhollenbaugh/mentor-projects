@@ -1,0 +1,25 @@
+.col {
+  height: 100vh;
+  width: calc(100vw/3);
+  float: left;
+}
+
+.col1 {
+  background: #4A90E2;
+}
+
+.col2 {
+  background: #50E3C2;
+}
+
+.col3 {
+  background: #B8E986;
+}
+
+.img {
+  background: #D0021B;
+  height: 20vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

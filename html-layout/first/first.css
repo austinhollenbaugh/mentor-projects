@@ -1,0 +1,23 @@
+body {
+  background: #d2d2d2;
+}
+
+.menu {
+  background: #444444;
+  height: 15vh;
+}
+
+.main {
+  background: #efefef;
+  margin: auto;
+  width: 80vw;
+  height: 75vh;
+  /*border: 1px solid black;*/
+}
+
+.footer {
+  background: #444444;
+  height: 10vh;
+  width: 80vw;
+  margin: auto;
+}
