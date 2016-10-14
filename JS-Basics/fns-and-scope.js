@@ -6,13 +6,13 @@ var name = 'Tyler';
 
   //Code Here
 
-  function isTyler (name) {
+let isTyler = (name) => {
     if (name === 'Tyler') {
       return true;
     } else {
       return false;
     }
-  }
+  };
 
 //////////////////PROBLEM 2////////////////////
 
@@ -22,10 +22,10 @@ var name = 'Tyler';
 
   //Code Here
 
-  function getName() {
-    var userName = prompt("What is your name?");
+var getName = () => {
+    let userName = prompt("What is your name?");
     return userName;
-  }
+};
 
 
 //////////////////PROBLEM 3////////////////////
@@ -36,10 +36,10 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-function welcome() {
-  var name = getName();
+let welcome = () => {
+  let name = getName();
   alert("Welcome, " + name);
-}
+};
 
 //////////////////PROBLEM 4////////////////////
 
@@ -69,9 +69,9 @@ function welcome() {
 //Create a function called myName that returns your name
 
   //Code Here
-  function myName() {
+  let myName = () => {
     return "Austin";
-  }
+  };
 
 
 
@@ -79,9 +79,9 @@ function welcome() {
 
   //Code Here
 
-  var newMyName = function myName () {
+  let newMyName = myName = () => {
     return "Austin";
-  }
+  };
 
 //Now alert the result of invoking newMyName
 
@@ -95,17 +95,15 @@ alert(newMyName());
 
   //Code Here
 
-  function outerFn() {
-    return function() {
-      return "Austin";
-    }
-  }
+  let outerFn = () => {
+    return () => "Austin";
+  };
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
 
-  var innerFn = outerFn();
+  let innerFn = outerFn();
 
 //Now invoke innerFn.
 
