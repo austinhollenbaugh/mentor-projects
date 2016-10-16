@@ -180,7 +180,7 @@ that each value is truthy. If it's not truthy, remove it from the object. */
   //Code Here
   for (var key in user1) {
     if (!user1[key]) {
-      delete user1.key;
+      delete user1[key];
     }
   }
 
@@ -189,10 +189,11 @@ that each value is truthy. If it's not truthy, remove it from the object. */
   //Code Here
 
 user1.name = "Austin Hollenbaugh";
-user1.email = "austinhollenbaugh@gmail.com";
-user1.birthday = "September 26, 1986";
+// user1.email = "austinhollenbaugh@gmail.com";
+user1.pwHash = "hey";
+// user1.birthday = "September 26, 1986";
 user1.username = "austinhollenbaugh";
-user1.age = 30;
+// user1.age = 30;
 
 
 
@@ -245,7 +246,7 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
   methodCollection.alertHello = function() {
-    // alert("hello");
+    alert("hello");
   };
 
   methodCollection.logHello = function() {
@@ -270,29 +271,38 @@ methodCollection.logHello();
   //Code Here
 
 function makePerson(name, birthday, ssn) {
-  this.name = name;
-  this.birthday = birthday;
-  this.ssn = ssn;
+  var person = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  };
+  return person;
 }
 
-function person(first, last, age, eye) {
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
-    this.eyeColor = eye;
-}
-var myFather = new person("John", "Doe", 50, "blue");
-var myMother = new person("Sally", "Rally", 48, "green");
+// function person(first, last, age, eye) {
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eye;
+// }
+// var myFather = new person("John", "Doe", 50, "blue");
+// var myMother = new person("Sally", "Rally", 48, "green");
 
 //NEXT PROBLEM
-
 
 
 // Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
   //Code Here
 
-
+  function makeCard (cardNumber, expirationDate, securityCode) {
+    var card = {
+      cardNumber: cardNumber,
+      expirationDate: expirationDate,
+      securityCode: securityCode
+    };
+    return card;
+  }
 
 //NEXT PROBLEM
 
@@ -304,3 +314,15 @@ var myMother = new person("Sally", "Rally", 48, "green");
 */
 
   //Code Here
+
+  function bindCard(personObj, creditCardObj) {
+     var newObj = {};
+    for (var key in personObj) {
+      newObj[key] = personObj[key];
+    }
+    for (key in creditCardObj) {
+      newObj[key] = creditCardObj[key];
+    }
+    console.log(newObj);
+    return newObj;
+  }
