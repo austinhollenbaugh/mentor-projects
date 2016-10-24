@@ -2,6 +2,8 @@ angular.module("angularFriends").controller("friendCtrl", function($scope) {
 
   $scope.sortDirection = "";
 
+
+
   $scope.friends = [
     {
       "name": "Preston McNeil",
@@ -435,6 +437,11 @@ angular.module("angularFriends").controller("friendCtrl", function($scope) {
     }
   ];
 
+  for (var i = 0; i < $scope.friends.length; i++) {
+    if ($scope.friends[i].current_location === null) {
+      $scope.friends.current_location = { name: '' };
+    }
+  }
 
 });
 //end
