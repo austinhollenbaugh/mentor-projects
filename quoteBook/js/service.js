@@ -11,13 +11,25 @@ angular.module('quoteBook').service('service', function() {
     { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
   ];
 
+  if (localStorage.getItem('quoteArr')) {
+    var arr = JSON.parse(localStorage.getItem('quoteArr'));
+    // console.log(arr);
+    for (var i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+      quotes.push(arr[i]);
+    }
+  }
+
   this.getData = function() {
     return quotes;
   };
 
   this.addData = function(data) {
+
     if (data.text && data.author) {
       quotes.push(data);
+      arr.push(data);
+      localStorage.setItem("quoteArr", JSON.stringify(arr));
       return true;
     }
     return false;
