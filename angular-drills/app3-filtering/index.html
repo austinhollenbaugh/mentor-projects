@@ -1,0 +1,10 @@
+<html ng-app="filterApp">
+	<body ng-controller="controller">
+		<input type="text" ng-model="filterItems">
+		<div ng-repeat="item in data | filter: filterItems ">{{item}}</div>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
+		<script src="service.js"></script>
+	</body>
+</html>
